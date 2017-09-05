@@ -23,18 +23,28 @@ public class TbShop implements java.io.Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = -942139986467893777L;
-	public static final String SHOP_ID = "shopId";
-	public static final String SHOP_NAME = "shopName";
-	public static final String SHOP_ADDRESS = "shopAddress";
-	public static final String LINK_MAN = "linkMan";
-	public static final String LINK_PHONE = "linkPhone";
-	public static final String SHOP_TYPE = "shopType";
-	public static final String SHOP_STATUS = "shopStatus";
-	public static final String CREATETIME = "createTime";
-	public static final String UPDATETIME = "updateTime";
-
+	public static final String ID = "id";
+	public static final String SHOP_NAME = "shop_name";
+	public static final String SHOP_ADDRESS = "shop_address";
+	public static final String LINK_MAN = "link_man";
+	public static final String LINK_PHONE = "link_phone";
+	public static final String SHOP_TYPE = "shop_type";
+	public static final String SHOP_STATUS = "shop_status";
+	public static final String CREATETIME = "create_time";
+	public static final String UPDATETIME = "update_time";
+/**
+	id
+shop_name
+shop_address
+link_man
+link_phone
+shop_type
+shop_status
+create_time
+update_time
+*/
 	/**主键**/
-	private Integer shopId;
+	private Integer id;
 	/**店铺名称**/
 	private String shopName;
 	/**店铺地址**/
@@ -73,13 +83,13 @@ public class TbShop implements java.io.Serializable {
 	// Property accessors
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "shop_id", unique = true, nullable = false)
-	public Integer getShopId() {
-		return this.shopId;
+	@Column(name = "id", unique = true, nullable = false)
+	public Integer getId() {
+		return id;
 	}
 
-	public void setShopId(Integer shopId) {
-		this.shopId = shopId;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	@Column(name = "shop_name", nullable = false, length = 100)
@@ -153,5 +163,7 @@ public class TbShop implements java.io.Serializable {
 	public void setUpdateTime(Timestamp updateTime) {
 		this.updateTime = updateTime;
 	}
+
+	
 
 }
