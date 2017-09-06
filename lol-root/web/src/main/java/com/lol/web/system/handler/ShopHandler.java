@@ -52,6 +52,7 @@ public class ShopHandler  extends BaseHandler{
     @ResponseBody
     public TbShop findShop(TbShop shop) throws Exception{
         if(null != shop.getId()){
+        	TbShop sp=shopService.get(shop.getId());
             return shopService.get(shop.getId());
         }
         
